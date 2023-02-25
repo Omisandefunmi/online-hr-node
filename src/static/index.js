@@ -10,13 +10,11 @@ form.addEventListener('submit', (event) => {
   const email = form.elements['email'].value;
   const phone = form.elements['phone'].value;
 
-  console.log(name);
-
   // Construct a request object with the form data
   const request = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: { name, email, phone }
+    body: JSON.stringify({ name, email, phone })
   };
 
   // Send the request to the server
